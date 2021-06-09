@@ -1,0 +1,75 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+ 
+}
+body{    
+    /* background: #373B44;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to bottom, #4286f4, #373B44);  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to bottom, #4286f4, #373B44); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url( fotos/footballstreet04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+
+}
+.container{
+    /* background: #fff; */
+    
+    border-radius:10px;
+    padding: 1px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    width: 800px;
+    /* flex: right;
+    flex-direction: column; */
+
+    /* margin: 0 auto; */
+}
+
+form{
+    /* margin: 20px; */
+
+}
+
+.card{
+    /* position: relative;
+    display: flex; */
+    /* flex-direction: row; */
+
+    /* display: inline-block; */
+    /* width: 30%; */
+    background: #fff;
+    margin: 10px 0px 10px 0px;
+    /* flex: right; */
+    /* border:none; */
+
+}
+
+
+/* biblioteca  indenx */
+
+
+#tourokugamen{
+    margin: 10px 0px 5px 0px;
+}
+
+/* new entry */
+#haikeientry{
+    border: none;
+    background: none;
+    color: #fff;
+}
+
+#tangotouroku {
+    margin-bottom: 10px;
+}
+
+#tangogamen{
+    margin-top: 5px;
+}

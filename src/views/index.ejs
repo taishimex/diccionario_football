@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- path の設定の仕方がバージョンによってちがう。。 -->
+    <%- include('./partials/header'); %>
+
+</head>
+<body>
+        
+<div class="container">
+
+
+
+<div class="" style="color:#fff; margin-top: 40px;">
+        <h2>単語帳</h2>
+        <form target="/search" method="POST" class="card card-body" style="padding: 0; border: none;">
+
+            <div  class="input-group" >
+                <input type="text" name="searchinput" class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="submit">検索</button>
+                </span>
+            </div>
+         
+         </form>
+
+         <div class="touroku">
+            <a href="/new-entry" id="tourokugamen" class="btn btn-info">
+                登録画面へ戻る
+        </a>
+        </div>        
+    
+
+</div>
+    
+    <div class="row">            
+            <% books.forEach(function (book){ %>    
+    <div class="col-md-12">        
+                <div class="card">
+                    <div class="card-header">
+                        <label>単語: <%= book. tango %></label>    
+                        <label> / 意味:</label>
+                        <%= book. significado %>
+                    </div>
+                    <div class="card-body">
+                        <label>使い方 例:</label>                    
+                            <%= book. uso %> 
+                    </div>
+                    <div class="card-body">
+                        <label>カテゴリ: <%= book.categoria %></label></BR>
+                             
+                        <label> 関連ワード: <%= book.relation %></label>
+                             
+                    </div>
+                    <div>   
+                        <a href="/editar/" class="btn btn-info"　style="margin-left:15px">編集</a>
+                   
+                        <a href="/delete/<%= book.id %>" class="btn btn-primary" >削除</a>
+                    
+                    </div>    
+
+                </div>    
+        <!-- </div> -->
+    </div>
+    <% })%>      
+    </div>    
+
+</div>
+        
+</body>
+</html>

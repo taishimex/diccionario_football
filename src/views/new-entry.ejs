@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include('./partials/header'); %>
+
+</head>
+<body>
+    <!-- <div id="newentrycontainer" class="container"> -->
+    <div class="container">
+    
+        <form id="haikeientry" target="/new-entry" method="POST" class="card card-body">
+            <div class="tangotouroku">
+                <h2>単語登録</h2>
+            </div>
+                
+        <div class="form-group">
+            <label for="tango">単語</label>
+            <input type="text" class="form-control" name="tango" id="tango" placeholder="" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="significado">意味</label>
+            <input type="text" class="form-control" name="significado" id="significado" placeholder="" >
+        </div>
+        <div class="form-group">
+            <label for="uso">使い方（例）</label>
+            <textarea  type="text" name="uso" id="uso" rows="5" class="form-control"></textarea>                 
+        
+        </div>
+        <div class="form-group">
+            <label for="categoria">カテゴリ</label>
+            <input type="text" class="form-control" name="categoria" id="categoria" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="relation">関連ワード</label>
+            <input type="text" class="form-control" name="relation" id="relation" placeholder="" >
+        </div>
+
+        </br>
+        <div>
+        <input type="submit" value="登録" class="btn btn-primary">
+        </div>
+
+        <div >
+            <a style="color: #fff;" href="/">単語帳</a>
+        </div>   
+        </form>
+</div>
+</body>
+</html>

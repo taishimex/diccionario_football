@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- path の設定の仕方がバージョンによってちがう。。 -->
+    <%- include('./partials/header'); %>
+
+</head>
+<body>
+        
+<div class="container">
+
+
+    <div class="" style="color:#fff; margin-top: 40px;">
+        <h2>検索単語</h2>
+    </div>
+
+    <div class="touroku">
+        <a href="/new-entry" id="tourokugamen" class="btn btn-info">
+            登録画面へ戻る
+    </a>        
+        <a href="/" id="tangogamen" class="btn btn-info">
+            単語帳へ戻る
+    </a>        
+    </div>
+    
+        <div class="row">
+            <% results.forEach(function (result){ %> 
+        
+            <div class="col-md-12">        
+                <div class="card">
+                    <div class="card-header">
+                        <label>単語:</label>    
+                        <p><%= result. tango %></p> 
+                        <label> / 意味:</label>
+                        <%= result. significado %>
+                    </div>
+                    <div class="card-body">
+                        <label>使い方 例:</label>                    
+                            <%= result. uso %> 
+                    </div>
+                    <div class="card-body">
+                        <label>カテゴリ:</label>
+                            <%= result.categoria %> 
+                        <label>  関連ワード:</label>
+                            <%= result.relation %> 
+                    </div>
+                    <div>   
+                    <a href="/search/delete/<%= result.id %>" class="btn btn-primary" style="margin-left:15px">削除</a>
+                    </div>
+                </div>   
+            </div>
+            <% })%>      
+        </div>    
+</div>
+        
+</body>
+</html>
