@@ -25,7 +25,7 @@
          </form>
 
          <div class="touroku">
-            <a href="/new-entry" id="tourokugamen" class="btn btn-info">
+            <a href="/new-entry" id="tourokugamen" class="btn btn-primary">
                 登録画面へ戻る
         </a>
         </div>        
@@ -38,13 +38,12 @@
     <div class="col-md-12">        
                 <div class="card">
                     <div class="card-header">
-                        <label>単語: <%= book. tango %></label>    
-                        <label> / 意味:</label>
-                        <%= book. significado %>
-                    </div>
+                        <label><b>単語: <%= book. tango %> / <%= book. significado %>
+                        </b></label>
+                       </div>
                     <div class="card-body">
                         <label>使い方 例:</label>                    
-                            <%= book. uso %> 
+                          <h1 class="frase" style="margin: 15px;">  「<%= book. uso %>」 </h1> 
                     </div>
                     <div class="card-body">
                         <label>カテゴリ: <%= book.categoria %></label></BR>
@@ -52,10 +51,10 @@
                         <label> 関連ワード: <%= book.relation %></label>
                              
                     </div>
-                    <div>   
-                        <a href="/editar/" class="btn btn-info"　style="margin-left:15px">編集</a>
+                    <div class="card-body">   
+                        <a href="/editar/<%= book.id %>" class="btn btn-primary"　style="margin-left:0px;">編集</a>
                    
-                        <a href="/delete/<%= book.id %>" class="btn btn-primary" >削除</a>
+                        <a href="/delete/<%= book.id %>" class="btn btn-primary" style="margin-left:0px;">削除</a>
                     
                     </div>    
 
