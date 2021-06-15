@@ -68,12 +68,47 @@ router.post('/new-entry', (req, res) => {
 })
 
 router.get('/delete/:id', (req, res) => {
+
+
         books = books.filter(book  => book.id != req.params.id);     
 
         const json_books = JSON.stringify(books);
         fs.writeFileSync('src/books.json', json_books, 'utf-8');
         res.redirect('/');
 });
+
+
+router.get('/editar/:id', (req,res)=>{
+
+    const editar = books.find(book  => book.id = req.params.id);     
+
+    console.log(book.id);
+    console.log(editar);
+
+    // input.disables = false;
+
+
+
+        // console.log(typeof(id));    
+        // console.log(id);    
+
+        // const editar = books.find(book => )
+
+
+        // const idEditor =  
+
+        // editor = books.find()    
+        // console.log(books);
+        
+
+        // let  = ;
+        // input.disabled = false;
+        
+        // res.redirect('/');
+});
+
+
+
 
 router.post('/',(req,res)=>{
     // no se por que funciona...
@@ -82,7 +117,7 @@ router.post('/',(req,res)=>{
     // let datas =[];
    console.log(searchinput); 
    results = books.filter((book) => book.tango === searchinput.searchinput);
-//    console.log(data); 
+   console.log(searchinput.searchinput); 
    console.log(results); 
    console.log(books); 
    let test="aaaaaa";

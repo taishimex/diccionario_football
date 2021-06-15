@@ -38,23 +38,31 @@
     <div class="col-md-12">        
                 <div class="card">
                     <div class="card-header">
-                        <label><b>単語: <%= book. tango %> / <%= book. significado %>
-                        </b></label>
+                        <label><h2><b> 
+                        <input name = "palabra" value = "<%= book.tango %>" >
+            
+                        <input value="<%= book. significado %>" >
+                        </b></h2></label>
                        </div>
+                  
                     <div class="card-body">
                         <label>使い方 例:</label>                    
-                          <h1 class="frase" style="margin: 15px;">  「<%= book. uso %>」 </h1> 
+                          <h1 class="frase" style="margin: 15px;"> <input value="「<%= book. uso %>」" disabled> </h1> 
                     </div>
                     <div class="card-body">
-                        <label>カテゴリ: <%= book.categoria %></label></BR>
+                        <label>カテゴリ:
+                            <input  value="<%= book.categoria %>" disabled> </label></BR>
                              
-                        <label> 関連ワード: <%= book.relation %></label>
+                        <label> 関連ワード: <input value="<%= book.relation %>" disabled> </label>
                              
                     </div>
+       
                     <div class="card-body">   
-                        <a href="/editar/<%= book.id %>" class="btn btn-primary"　style="margin-left:0px;">編集</a>
+                        <a href="/editar/<%= book.id %>" class="btn btn-success"　style="margin-left:0px;">編集</a>
                    
-                        <a href="/delete/<%= book.id %>" class="btn btn-primary" style="margin-left:0px;">削除</a>
+                        <a href="/save/<%= book.id %>" class="btn btn-warning"　style="margin-left:0px;">保存</a>
+                        
+                        <a href="/delete/<%= book.id %>" class="btn btn-danger" style="margin-left:0px;">削除</a>
                     
                     </div>    
 
